@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №1</title>
+</head>
+<body>
+    <form>
+        <input id="a" type="number" placeholder="a" min="0">
+        <input id="b" type="number" placeholder="b" min="0">
+        <input id="c" type="number" placeholder="c" min="0">
+        <input type="submit" value="Проверить"><br><br>
+        <input type="button" value="Тест №1" onclick="aInput.value = 1; bInput.value = 2; cInput.value = 5">
+        <input type="button" value="Тест №2" onclick="aInput.value = 1; bInput.value = 1; cInput.value = 1">
+        <input type="button" value="Тест №3" onclick="aInput.value = 2; bInput.value = 2; cInput.value = 3">
+        <input type="button" value="Тест №4" onclick="aInput.value = 4; bInput.value = 2; cInput.value = 3">
+    </form>
+    <script defer>
+        const aInput = document.querySelector('input');
+        const bInput = document.getElementById('b');
+        const cInput = document.getElementById('c');
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            let a = +aInput.value, b = +bInput.value, c = +cInput.value;
+            let s = (a + b + c) / 2;
+            let area = s * (s - a) * (s - b) * (s - c);
+            console.log(area, (s - a), (s - b), (s - c));
+
+            if (area <= 0) {
+                alert('Треугольник не существует');
+            }
+            else if (a != b & b != c & a != c) {
+                alert('Треугольник разносторонний')
+            }
+            else if (a == b && b == c) {
+                alert('Треугольник равносторонний');
+            }
+            else {
+                alert('Треугольник равнобедренный');
+            }
+
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
