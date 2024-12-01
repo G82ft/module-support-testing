@@ -7,4 +7,4 @@
    2. [Практическая работа №2](/practical/2/)
    3. [Практическая работа №6](/practical/6/)
    4. [Практическая работа №9](/practical/9/)
-   5. [Практическая работа №x - Unit-test](/practical/unit-test)
+   5. [Практическая работа Unit-test](/practical/unit-test)
